@@ -1,0 +1,20 @@
+tinyMCE.addI18n('de.morelinks_dlg',{
+link_title:"Morelinks: einf\u00FCgen/bearbeiten",
+page:"Contao-Seiten",
+file:"Contao-Dateien",
+news:"News-Artikel",
+events:"Veranstaltungen",
+faqs:"H\u00E4ufige Fragen",
+articles:"Artikel",
+link_url:"Adresse",
+link_target:"Fenster",
+link_target_same:"Im selben Fenster \u00F6ffnen",
+link_target_blank:"Neues Fenster \u00F6ffnen",
+link_titlefield:"Titel",
+link_is_email:"Bei der Adresse scheint es sich um eine E-Mail-Adresse zu handeln. Wollen Sie das dazu ben\u00F6tigte mailto: voranstellen?",
+link_is_external:"Bei der Adresse scheint es sich um einen externen Link zu handeln. M\u00F6chten Sie, dass zur korrekten Verlinkung ein http:// vorangestellt wird?",
+link_list:"Linkliste",
+image_rel:"Lightbox",
+image_rel_single:"Einzelnes Element",
+image_rel_multi:"Galerie"
+});
