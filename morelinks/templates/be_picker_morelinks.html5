@@ -1,0 +1,25 @@
+
+<div class="tl_listing_container tree_view" id="tl_listing">
+<?php if($this->data): ?>
+  <ul class="tl_listing tree_view picker_selector" id="singleSRC">
+    <li class="tl_folder_top"><div class="tl_left"><img src="<?php echo $this->data['header']['icon']; ?>" width="18" height="18" alt=""> <?php echo $this->data['header']['title']; ?></div> <div class="tl_right">&nbsp;</div><div style="clear:both"></div></li>
+	<li class="parent" id="singleSRC_parent">
+	  <ul>
+	<?php foreach($this->data['body'] as $folder): ?>
+		<li class="tl_folder"><div class="tl_left" style="padding-left:20px"><img src="<?php echo $this->data['header']['icon']; ?>" width="18" height="18" alt=""> <strong><?php echo $folder['folder']; ?> (<?php echo $folder['count']; ?>)</strong></a></div> <div class="tl_right"></div><div style="clear:both"></div></li><li id="tree_tl_content_singleSRC_0ef5914f64286e7a280edd851ffc4e5f" class="parent">
+		<ul class="level_1">
+		<?php foreach($folder['entries'] as $entry): ?>
+			<li class="tl_file"><div class="tl_left" style="padding-left:40px"><span class="date" style="color: #999">[<?php echo $entry['date']?\Date::parse(\Config::get('dateFormat'), $entry['date']):''; ?>]</span> <?php echo \String::substr($entry['title'], 59, ' &hellip;'); ?></div><div class="tl_right"><input type="radio" name="singleSRC" id="singleSRC_<?php echo $entry['id']; ?>" class="tl_tree_radio" value="<?php echo $entry['value']; ?>" onfocus="Backend.getScrollOffset()"></div><div style="clear:both"></div></li>
+		<?php endforeach; ?>
+		</ul>
+		</li>
+	<?php endforeach; ?>
+		<li class="tl_folder"><div class="tl_left">&nbsp;</div> <div class="tl_right"><label for="reset_singleSRC" class="tl_change_selected">Auswahl aufheben</label> <input type="radio" name="singleSRC" id="reset_singleSRC" class="tl_tree_radio" value="" onfocus="Backend.getScrollOffset()"></div><div style="clear:both"></div></li>
+      </ul>
+	</li>
+  </ul>      
+  
+<?php else: ?>
+<p class="empty">Nothing to select for linking.</p>
+<?php endif; ?>
+</div>
